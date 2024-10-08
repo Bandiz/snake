@@ -1,10 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://rlcpfgqretr0"]
+[gd_scene load_steps=4 format=3 uid="uid://rlcpfgqretr0"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_ie2uj"]
 [ext_resource type="PackedScene" uid="uid://ylmjsoiffdwv" path="res://Snake.tscn" id="2_81oua"]
+[ext_resource type="PackedScene" uid="uid://bpnny2t3f4xl7" path="res://Wall.tscn" id="3_myape"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ie2uj")
 
 [node name="Snake" parent="." instance=ExtResource("2_81oua")]
-position = Vector2(288, 200)
+position = Vector2(504, 280)
+
+[node name="WallContainer" type="Node" parent="."]
+
+[node name="WallTop" parent="WallContainer" instance=ExtResource("3_myape")]
+position = Vector2(576, 48)
+scale = Vector2(75, 10)
+
+[node name="WallBottom" parent="WallContainer" instance=ExtResource("3_myape")]
+position = Vector2(576, 560)
+scale = Vector2(75, 10)
+
+[node name="WallLeft" parent="WallContainer" instance=ExtResource("3_myape")]
+position = Vector2(136, 312)
+scale = Vector2(20, 25)
+
+[node name="WallRight" parent="WallContainer" instance=ExtResource("3_myape")]
+position = Vector2(1016, 304)
+scale = Vector2(20, 25)
