@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw0hovi8bdgbk"]
+
+[ext_resource type="Script" path="res://Border/Border.gd" id="1_aonna"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1fysu"]
+size = Vector2(1152, 648)
+
+[node name="Border" type="PanelContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aonna")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(576, 324)
+shape = SubResource("RectangleShape2D_1fysu")
+
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

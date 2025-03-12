@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ylmjsoiffdwv"]
+[gd_scene load_steps=6 format=3 uid="uid://ylmjsoiffdwv"]
+
+[ext_resource type="Script" path="res://Snake/Snake.gd" id="1_o7onx"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_n24bc"]
 particles_animation = true
@@ -8,17 +10,20 @@ particles_anim_loop = false
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3c5fk"]
 
-[sub_resource type="Gradient" id="Gradient_b8uaa"]
+[sub_resource type="Gradient" id="Gradient_5b6ww"]
 offsets = PackedFloat32Array(0, 0.558442, 1)
 colors = PackedColorArray(0.707998, 0.000140927, 0.624544, 1, 0.776157, 0.480079, 0.150637, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_y60hl"]
-gradient = SubResource("Gradient_b8uaa")
+gradient = SubResource("Gradient_5b6ww")
 width = 20
 height = 20
 
 [node name="Snake" type="CharacterBody2D"]
 material = SubResource("CanvasItemMaterial_n24bc")
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_o7onx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_3c5fk")

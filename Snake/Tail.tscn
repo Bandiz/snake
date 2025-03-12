@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwq74tgpgdary"]
+
+[ext_resource type="Script" path="res://Snake/Tail.gd" id="1_qlvl5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u321m"]
+
+[sub_resource type="Gradient" id="Gradient_s2ev5"]
+offsets = PackedFloat32Array(0.885246)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_im7gv"]
+gradient = SubResource("Gradient_s2ev5")
+fill_from = Vector2(1, 0)
+fill_to = Vector2(0, 0)
+
+[node name="Tail" type="AnimatableBody2D"]
+script = ExtResource("1_qlvl5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u321m")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("GradientTexture2D_im7gv")

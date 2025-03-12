@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://jdshuo0c1yi6"]
+
+[ext_resource type="Script" path="res://Food/Food.gd" id="1_36p5m"]
+[ext_resource type="Texture2D" uid="uid://dk46p611m5ll8" path="res://Food/apple_icon.png" id="1_ka5uy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_smrv2"]
+
+[node name="Food" type="StaticBody2D"]
+script = ExtResource("1_36p5m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(10, 10)
+shape = SubResource("CircleShape2D_smrv2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ka5uy")
