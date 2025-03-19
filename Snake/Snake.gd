@@ -29,6 +29,8 @@ func _physics_process(delta: float) -> void:
 		if collider is Food:
 			collider.eat()
 			_add_tail_segment(previous_position)
+		if collider is Wall:
+			SignalBus.game_over.emit()
 			
 	_update_tail_positions(previous_position)
 

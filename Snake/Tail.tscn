@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwq74tgpgdary"]
 
-[ext_resource type="Script" path="res://Snake/Tail.gd" id="1_qlvl5"]
+[ext_resource type="Script" uid="uid://ssrgmi6j57u2" path="res://Snake/Tail.gd" id="1_qlvl5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u321m"]
 

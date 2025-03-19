@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ylmjsoiffdwv"]
 
-[ext_resource type="Script" path="res://Snake/Snake.gd" id="1_o7onx"]
+[ext_resource type="Script" uid="uid://qbix4kc4lgga" path="res://Snake/Snake.gd" id="1_o7onx"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_n24bc"]
 particles_animation = true

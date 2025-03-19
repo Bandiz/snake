@@ -1,14 +1,15 @@
 [gd_scene load_steps=5 format=3 uid="uid://rlcpfgqretr0"]
 
-[ext_resource type="Script" path="res://Main.gd" id="1_ie2uj"]
+[ext_resource type="Script" uid="uid://brm1ywjq56d6" path="res://Main.gd" id="1_ie2uj"]
 [ext_resource type="PackedScene" uid="uid://jdshuo0c1yi6" path="res://Food/Food.tscn" id="2_8cxtd"]
 [ext_resource type="PackedScene" uid="uid://ylmjsoiffdwv" path="res://Snake/Snake.tscn" id="2_81oua"]
-[ext_resource type="PackedScene" uid="uid://cw0hovi8bdgbk" path="res://Border/Border.tscn" id="4_dapiw"]
+[ext_resource type="PackedScene" uid="uid://cdjja08guvetg" path="res://Background/Background.tscn" id="4_cm0pq"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_ie2uj")
 
 [node name="Food" parent="." instance=ExtResource("2_8cxtd")]
+z_index = 1
 position = Vector2(400, 280)
 scale = Vector2(0.2, 0.2)
 margin_right = 50
@@ -17,10 +18,11 @@ margin_top = 50
 margin_bottom = 50
 
 [node name="Snake" parent="." instance=ExtResource("2_81oua")]
+z_index = 1
 position = Vector2(504, 280)
 collision_layer = 1
 collision_mask = 1
 speed = 500.0
 is_paused = false
 
-[node name="Border" parent="." instance=ExtResource("4_dapiw")]
+[node name="Border" parent="." instance=ExtResource("4_cm0pq")]
